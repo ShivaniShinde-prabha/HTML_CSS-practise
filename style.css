@@ -1,0 +1,151 @@
+/* ================= GLOBAL STYLES ================= */
+
+/*
+* selector applies to all elements
+box-sizing prevents layout breaking
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*
+CSS Variables (Reusable values)
+*/
+:root {
+    --primary-color: #2563eb;
+    --secondary-color: #f1f5f9;
+    --text-color: #1e293b;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text-color);
+    background-color: var(--secondary-color);
+    line-height: 1.6;
+}
+
+/* ================= HEADER ================= */
+
+.header {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* ================= NAVBAR ================= */
+
+/*
+Flexbox is used for layout alignment
+*/
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    background: #1e40af;
+}
+
+.navbar li {
+    margin: 10px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+/* ================= SECTIONS ================= */
+
+.section {
+    padding: 30px;
+    margin: 20px;
+    background: white;
+    border-radius: 8px;
+}
+
+
+
+
+/* ================= TABLE ================= */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+}
+
+th, td {
+    border: 1px solid #cbd5f5;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background: #dbeafe;
+}
+
+/* ================= BUTTON ================= */
+
+/*
+Transition adds smooth animation
+*/
+.btn {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #1e40af;
+}
+
+/* ================= FORM ================= */
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input, textarea {
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #94a3b8;
+    border-radius: 4px;
+}
+
+/* ================= FOOTER ================= */
+
+.footer {
+    text-align: center;
+    padding: 15px;
+    background: #1e293b;
+    color: white;
+}
+
+/* ================= RESPONSIVE DESIGN ================= */
+
+/*
+Media Queries allow layout changes
+based on screen size
+*/
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section {
+        margin: 10px;
+    }
+}
